@@ -1,7 +1,6 @@
 # BlenderSTEP
 
-**BlenderSTEP** is a pure STEP import add-on for Blender: import STEP bodies, mesh them for display,
-bake to a plain mesh.
+**BlenderSTEP** is a pure STEP import and mesher add-on for Blender.
 
 ## The pipeline
 
@@ -17,7 +16,7 @@ bake to a plain mesh.
 
 - **NVIDIA** — thanks for open sourcing the USD B-rep kernel (**SMLib**, Apache-2.0), which this add-on
   uses through **smlibpy** (MIT).
-- **Claas Kuhnen** (Info@ckbrd.de) — the author of Blender STEP and of the original NURBS Tools add-on.
+- **Claas Kuhnen** (Info@ckbrd.de) — the author of Blender STEP add-on.
 
 ## License
 
