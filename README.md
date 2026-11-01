@@ -1,3 +1,6 @@
+<img width="1577" height="974" alt="Screenshot 2026-11-01 at 1 07 12 PM" src="https://github.com/user-attachments/assets/e5d1ef3e-9bb5-4f63-a327-ee48cc22f0ca" />
+
+
 # Blender STEP
 
 **Blender STEP** is a pure STEP importer add-on for Blender: import STEP bodies, mesh them for
