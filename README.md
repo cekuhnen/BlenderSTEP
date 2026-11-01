@@ -1,4 +1,5 @@
-<img width="1194" height="973" alt="Screenshot 2026-11-01 at 1 09 41 PM" src="https://github.com/user-attachments/assets/97f19d47-47a3-4f5d-9c75-11c5dda525da" />
+<img width="1194" height="973" alt="Screenshot 2026-11-01 at 1 09 41 PM" src="https://github.com/user-attachments/assets/15fe529d-6bf0-4492-93f3-c231ca103b80" />
+
 
 # Blender STEP
 
