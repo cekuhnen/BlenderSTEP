@@ -1,7 +1,7 @@
 # BlenderSTEP
 
 **BlenderSTEP** is a pure STEP I/O add-on for Blender: import STEP bodies, mesh them for display,
-bake to a plain mesh, and export STEP again.
+bake to a plain mesh.
 
 ## The pipeline
 
@@ -12,8 +12,6 @@ bake to a plain mesh, and export STEP again.
    it fell back).
 3. **Bake to Mesh** — turns the selected CAD object into a regular Blender mesh (keeps the current
    mesh, drops the exact geometry), for export / 3D printing / downstream tools.
-4. **Export STEP** — File → Export → *STEP, exact NURBS (*.step)* writes the selected CAD objects as
-   exact STEP solids, at their real size.
 
 ## Credits
 
