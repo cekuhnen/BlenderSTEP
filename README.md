@@ -1,6 +1,7 @@
-# BlenderSTEP
+# Blender STEP
 
-**BlenderSTEP** is a pure STEP import and mesher add-on for Blender.
+**Blender STEP** is a pure STEP importer add-on for Blender: import STEP bodies, mesh them for
+display, and bake to a plain mesh.
 
 ## The pipeline
 
@@ -8,15 +9,35 @@
    CAD object (SMLib solid, stored as a blob) at its real size.
 2. **Display / meshing** — the CAD object shows its tessellation: the add-on's own **Fast Mesher**, or
    the kernel's tessellation when the fast mesher is off or cannot handle a face (the panel notes when
-   it fell back).
-3. **Bake to Mesh** — turns the selected CAD object into a regular Blender mesh (keeps the current
-   mesh, drops the exact geometry), for export / 3D printing / downstream tools.
+   it fell back). **Display Quality** (Draft / Normal / Fine) is a per-part choice, applied to all selected
+   CAD objects.
+3. **Diagnostic shading** — on a selected CAD object: **Off**, **Zebra** (reflected stripes, running
+   smoothly across G2 joins, bending at G1 and breaking at G0), **Highlight Lines** (long straight studio
+   lights reflected as thin lines — what designers judge a surface by) or **Environment Image** (chrome
+   reflection of a loaded HDRI / panorama). **High Quality** colors the mesh by Gaussian curvature, where
+   the tessellation is fine or coarse. A choice made on a part goes to all selected CAD objects.
+4. **Bake to Mesh** — turns the selected CAD object into a regular Blender mesh (keeps the current
+   mesh, drops the exact geometry), for 3D printing / downstream tools.
+
+## The panel
+
+The **Blender STEP** panel in the 3D viewport sidebar (N) / the *STEP* category reads, top to bottom:
+
+1. **Import STEP** — import every body of a STEP file as an exact CAD object.
+2. **Fast Mesher** — the add-on's mesher for display (vs. the kernel's tessellation).
+3. **Display Quality** — Draft / Normal / Fine, per-part choice that is applied to all selected CAD objects.
+4. **Diagnostic** — Off / Zebra / Highlight Lines / Environment Image / High Quality, with its settings,
+   per-part choice that is applied to all selected CAD objects (a change made on one part goes to the
+   other selected parts too).
+
+**Bake to Mesh** sits at the bottom — the flow is: import, set meshing, verify with the diagnostic
+shader, then bake.
 
 ## Credits
 
 - **NVIDIA** — thanks for open sourcing the USD B-rep kernel (**SMLib**, Apache-2.0), which this add-on
   uses through **smlibpy** (MIT).
-- **Claas Kuhnen** (Info@ckbrd.de) — the author of Blender STEP add-on.
+- **Claas Kuhnen** (Info@ckbrd.de) — the author of Blender STEP.
 
 ## License
 
