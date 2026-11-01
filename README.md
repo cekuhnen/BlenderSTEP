@@ -7,9 +7,11 @@ display, and bake to a plain mesh.
 
 1. **Import STEP** — File → Import → *STEP (.step / .stp)* imports every body of the file as an exact
    CAD object (SMLib solid, stored as a blob) at its real size.
-2. **Display / meshing** — the CAD object shows its tessellation: the add-on's own **Fast Mesher**, or
-   the kernel's tessellation when the fast mesher is off or cannot handle a face (the panel notes when
-   it fell back). **Display Quality** (Draft / Normal / Fine) is a per-part choice, applied to all selected
+2. **Display / meshing** — the CAD object shows its tessellation. The **Mesher** setting picks who makes it: **Auto**
+   (default) uses the add-on's own fast mesher on bodies made only of planes, cylinders, cones and spheres
+   (many holes, flat plates) and the kernel's tessellation on everything else; **Fast** and **Kernel** force one
+   or the other. The kernel also steps in for a face the fast mesher cannot handle (the panel notes when
+   it did). **Display Quality** (Draft / Normal / Fine) is a per-part choice, applied to all selected
    CAD objects.
 3. **Diagnostic shading** — on a selected CAD object: **Off**, **Zebra** (reflected stripes, running
    smoothly across G2 joins, bending at G1 and breaking at G0), **Highlight Lines** (long straight studio
@@ -24,7 +26,7 @@ display, and bake to a plain mesh.
 The **Blender STEP** panel in the 3D viewport sidebar (N) / the *STEP* category reads, top to bottom:
 
 1. **Import STEP** — import every body of a STEP file as an exact CAD object.
-2. **Fast Mesher** — the add-on's mesher for display (vs. the kernel's tessellation).
+2. **Mesher** — Auto / Fast / Kernel (also offered in the import dialog; changing it re-meshes the parts).
 3. **Display Quality** — Draft / Normal / Fine, per-part choice that is applied to all selected CAD objects.
 4. **Diagnostic** — Off / Zebra / Highlight Lines / Environment Image / High Quality, with its settings,
    per-part choice that is applied to all selected CAD objects (a change made on one part goes to the
