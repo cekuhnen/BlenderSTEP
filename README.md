@@ -1,6 +1,6 @@
 # BlenderSTEP
 
-**BlenderSTEP** is a pure STEP I/O add-on for Blender: import STEP bodies, mesh them for display,
+**BlenderSTEP** is a pure STEP import add-on for Blender: import STEP bodies, mesh them for display,
 bake to a plain mesh.
 
 ## The pipeline
